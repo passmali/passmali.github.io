@@ -192,17 +192,31 @@ h6 {
   color: #149ddd;
 }
 
+.btn-krim {
+  color: #fff;
+  background-color: #ffd1b3;
+  border-color: #ffd1b3;
+}
+
+.btn-icon-split {
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
+  left: 15px;
   top: 15px;
   z-index: 9998;
   border: 0;
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: #00004d;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -231,6 +245,7 @@ h6 {
   background: url("../img/bg2.png") top center;
   background-size: cover;
 }
+
 
 #hero:before {
   content: "";
@@ -1101,4 +1116,55 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+wrapper {
+    width: 100%;
+    margin: auto;
+}
+.wrapper a {
+    border: 5px solid transparent;
+    width: 100%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+.wrapper img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.wrapper a:before {
+    transition: all .6s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333333;
+    transform: scale(0);
+    border-radius: 5px;
+}
+.wrapper a:hover:before {
+    opacity: .2;
+    transform: scale(1);
+}
+.wrapper a:after {
+    transition: all .7s ease .2s;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: #252525;
+    opacity: 0;
+    transform: scale(0);
+}
+.wrapper a:hover:after {
+    opacity: .35;
+    transform: scale(1);
+    border-radius: 5px;
 }
