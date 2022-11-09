@@ -23,7 +23,11 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+ 
+<audio autoplay="true">
+    <source src="bgm.mp3" type="audio/mpeg">
+    Browsermu tidak mendukung tag audio, upgrade donk!
+</audio>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
@@ -88,7 +92,7 @@
           <p></p>
         </div>
 
-          <div class="row">
+        <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
             <img src="assets/img/ps3.png" class="img-fluid" alt="">
           </div>
@@ -347,8 +351,8 @@
           <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-whatsapp"></i></div>
             <h4 class="title"><a href="https://wa.me/6283143379997?t">Tingkat SD Sederajat</a></h4>
-            <p class="description"><b>Elisa Kristiana Risty</b></p>
-			<p class="description">+62 831-4337-9997</p>
+            <p class="description"><b>Kristiana Risty</b></p>
+			<p class="description">+62 831-4337-9997Elisa</p>
 			<p class="description"><a href="https://wa.me/6283143379997?t" class="btn btn-primary btn-md"><i class="bi bi-whatsapp"></i> Hubungi</a></p>
           </div>
           <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -415,9 +419,15 @@
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="col-lg-7 col-table">
             <div class="info">
-			<iframe width="100%" height="100%" src="https://whatsform.com/cInwgE"></iframe>
+			<div id="laptop">	
+				<iframe width="100%" height="600px" src="https://whatsform.com/cInwgE"></iframe>
+			</div>
+			<div id="hp">	
+				<<iframe width="100%" height="800px" src="https://whatsform.com/cInwgE"></iframe>
+			</div>
+			
             </div>
           </div>
 
@@ -425,7 +435,6 @@
 
       </div>
     </section><!-- End Contact Section -->
-	
 		
 
   </main><!-- End #main -->
@@ -470,6 +479,22 @@
 			} else {
 				document.getElementById("hide").hidden=false;
 				document.getElementById("hidex").hidden=true;
+				}
+			}
+
+			var x = window.matchMedia("(max-width: 780px)")
+			responsif(x) // Call listener function at run time
+			x.addListener(responsif) // Attach listener function on state changes
+	</script>
+	
+	<script>
+	function responsif(x) {
+			if (x.matches) { // If media query matches
+				document.getElementById("laptop").hidden=true;
+				document.getElementById("hp").hidden=false;
+			} else {
+				document.getElementById("laptop").hidden=false;
+				document.getElementById("hp").hidden=true;
 				}
 			}
 
