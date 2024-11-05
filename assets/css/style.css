@@ -1110,8 +1110,8 @@ section {
     border-radius: 50%;
 }
 .socialIcons a i{
-    font-size: 4em;
-    color: black;
+    font-size: 2em;
+    color: #380001;
     opacity: 0,9;
 }
 /* Hover affect on social media icon */
