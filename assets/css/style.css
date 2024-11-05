@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #37b3ed;
+  color: #e60000;
   text-decoration: none;
 }
 
@@ -189,7 +189,7 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #9c0000;
 }
 
 .btn-krim {
@@ -216,7 +216,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #00004d;
+  background-color: #540001;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -1090,7 +1090,7 @@ section {
 #footer {
   padding: 15px;
   color: #f4f6fd;
-  font-size: 14px;
+  font-size: 15px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -1101,13 +1101,14 @@ section {
 
 #footer .copyright {
   text-align: center;
+  font-size: 10px;
 }
 
 #footer .credits {
-  padding-top: 5px;
+  padding-top: 4px;
   text-align: center;
-  font-size: 13px;
-  color: #eaebf0;
+  font-size: 12px;
+  color: #f4f6fd;
 }
 
 @media (max-width: 1199px) {
