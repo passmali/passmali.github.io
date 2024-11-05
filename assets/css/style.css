@@ -78,7 +78,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #380001;
   overflow-y: auto;
 }
 
@@ -86,7 +86,7 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 2px solid #0c0c0d;
 }
 
 #header .profile h1 {
@@ -1096,7 +1096,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #540001;
+  background: #380001;
 }
 .socialIcons{
     display: flex;
@@ -1125,12 +1125,12 @@ section {
 }
 #footer .copyright {
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 #footer .credits {
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   color: #f4f6fd;
 }
 
