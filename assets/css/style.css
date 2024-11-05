@@ -1110,7 +1110,7 @@ section {
     border-radius: 50%;
 }
 .socialIcons a i{
-    font-size: 2em;
+    font-size: 4em;
     color: black;
     opacity: 0,9;
 }
@@ -1129,7 +1129,6 @@ section {
 }
 
 #footer .credits {
-  padding-top: 4px;
   text-align: center;
   font-size: 12px;
   color: #f4f6fd;
