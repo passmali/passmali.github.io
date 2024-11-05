@@ -78,7 +78,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #380001;
+  background: #2d0000;
   overflow-y: auto;
 }
 
@@ -108,7 +108,7 @@ h6 {
 #header .profile .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #212431;
+  background: #330000;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
