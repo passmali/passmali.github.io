@@ -327,7 +327,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #9c0000;
 }
 
 .section-title h2::after {
@@ -561,7 +561,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #540001;
+  color: #380001;
 }
 
 .portfolio #portfolio-flters li:last-child {
