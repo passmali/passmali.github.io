@@ -310,13 +310,13 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 40px;
   }
 
   #hero h2 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
     margin-bottom: 30px;
   }
 }
