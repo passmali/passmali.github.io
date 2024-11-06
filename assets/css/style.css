@@ -270,7 +270,7 @@ h6 {
     padding-top: 48px;
   }
 #hero h1 {
-  color: linier-gradient (to top, #540001, #9c0000, #540001);
+  background:linear-gradient(to top, #540001, #9c0000, #540001);background-clip: text;text-fill-color: transparent;
   text-shadow: 0px 15px 20px black,
                0px 10px 25px black;
   margin: 0;
