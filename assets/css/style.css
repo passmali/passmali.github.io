@@ -243,33 +243,37 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background: url("../img/bg2.png") top center;
   background-size: cover;
+  position: relative;
 }
 
 
 #hero:before {
   content: "";
+  background: rgba(0, 0, 0, 0.25);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
 }
 
 #hero .hero-container {
-  position: relative;
+  padding-top: 72px;
   z-index: 4;
-  min-width: 300px;
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 0;
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
+  color: #fff;
+}
+#hero h3 {
+  margin: 10px 0 0 0;
   color: #fff;
 }
 
