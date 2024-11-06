@@ -1096,7 +1096,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #380001;
+  background: #540001;
 }
 .socialIcons{
     display: flex;
@@ -1111,7 +1111,7 @@ section {
 }
 .socialIcons a i{
     font-size: 2em;
-    color: #380001;
+    color: #540001;
     opacity: 0,9;
 }
 /* Hover affect on social media icon */
@@ -1125,12 +1125,12 @@ section {
 }
 #footer .copyright {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #footer .credits {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: #f4f6fd;
 }
 
