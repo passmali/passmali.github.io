@@ -273,10 +273,10 @@ h6 {
 #hero h1 {
   margin: 0;
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 50px;
   color: #fff;
-  text-shadow: 0px 2px 0px #c40000,
+  text-shadow: 0px 4px 0px #540001,
                0px 4px 0px #9c0000;
 }
 #hero h3 {
@@ -309,8 +309,8 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 36px;
+    line-height: 40px;
   }
 
   #hero h3 {
