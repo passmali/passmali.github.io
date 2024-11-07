@@ -48,7 +48,7 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  filter: drop-shadow(0px 10px 10px black);
+  filter: drop-shadow(0px 2px 10px black);
   transition: all 0.4s;
 }
 
@@ -276,8 +276,8 @@ h6 {
   font-weight: 800;
   line-height: 50px;
   color: #fff;
-  text-shadow: 0px 15px 2px #9c0000,
-               0px 10px 2px #540001;
+  text-shadow: 0px 2px 0px #9c0000,
+               0px 4px 0px #540001;
 }
 #hero h3 {
   color: #fff;
