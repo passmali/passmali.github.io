@@ -270,13 +270,13 @@ h6 {
     padding-top: 48px;
   }
 #hero h1 {
-  color: #fff;
-  text-shadow: 0px 15px 0px ##9c0000,
-               0px 10px 0px #540001;
   margin: 0;
   font-size: 48px;
   font-weight: 800;
   line-height: 50px;
+  color: #fff;
+  text-shadow: 0px 15px 2px ##9c0000,
+               0px 10px 2px #540001;
 }
 #hero h3 {
   color: #fff;
