@@ -358,10 +358,9 @@ section {
 }
 
 .section-title h2::after {
-  content: "";
   position: absolute;
   display: block;
-  width: 80px;
+  width: 70px;
   height: 3px;
   background: #540001;
   bottom: 0;
