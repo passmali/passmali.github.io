@@ -276,6 +276,7 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 50px;
+  letter-spacing: 1px;
   color: #9e0000;
   font-family: "Poppins", sans-serif;
   text-shadow: 1px 2px 0px #d1be9e,
@@ -287,9 +288,11 @@ h6 {
   letter-spacing: 2px;
   margin: 10px 0 0 0;
   font-size: 24px;
+  font-weight: 700;
   color: #cfc2ab;
-  text-shadow: 0px 3px 5px black, 
-               0px 3px 10px black;
+  text-shadow: 0px 2px 5px black, 
+               0px 3px 10px black,
+               0px 5px 15px black;
 }
 
 #hero .btn-get-started {
@@ -323,12 +326,10 @@ h6 {
     height: 80vh;
   }
   #hero h1 {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 35px;
   }
   #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
   }
 }
 
