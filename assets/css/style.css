@@ -137,12 +137,17 @@ h6 {
 @media (max-width: 1199px) {
   #header {
     left: -300px;
-  }
-
+    }
   #main {
     margin-left: 0;
+    }
+}
+@media (max-width: 768px) {
+  #header .profile .social-links a {
+  font-size: 25px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
