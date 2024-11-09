@@ -1,9 +1,3 @@
-/**
-* Template Name: iPortfolio - v3.9.1
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -137,24 +131,19 @@ h6 {
 @media (max-width: 1199px) {
   #header {
     left: -300px;
-    }
+  }
+
   #main {
     margin-left: 0;
-    }
-}
-@media (max-width: 768px) {
-  #header .profile .social-links a {
-  font-size: 25px;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding: 30px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 .nav-menu * {
@@ -174,14 +163,14 @@ h6 {
   align-items: center;
   color: #a8a9b4;
   padding: 12px 15px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .nav-menu a i,
 .nav-menu a:focus i {
-  font-size: 24px;
+  font-size: 25px;
   padding-right: 8px;
   color: #6f7180;
 }
@@ -234,6 +223,7 @@ h6 {
   justify-content: center;
   line-height: 0;
   border-radius: 50px;
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
   cursor: pointer;
 }
 
@@ -244,6 +234,7 @@ h6 {
 .mobile-nav-active #header {
   left: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -278,12 +269,12 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 50px;
   letter-spacing: 1px;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 50px;
   color: #9e0000;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   text-shadow: 1px 2px 0px #d1be9e,
                -4px 8px 5px black,
                -4px 8px 10px black;
@@ -293,11 +284,9 @@ h6 {
   letter-spacing: 2px;
   margin: 10px 0 0 0;
   font-size: 24px;
-  font-weight: 700;
   color: #cfc2ab;
-  text-shadow: 0px 2px 5px black, 
-               0px 3px 10px black,
-               0px 5px 15px black;
+  text-shadow: 0px 3px 5px black, 
+               0px 3px 10px black;
 }
 
 #hero .btn-get-started {
@@ -320,9 +309,10 @@ h6 {
   border: 3px solid #9e0000;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1199px) {
   #hero {
     background-attachment: fixed;
+    left: 300px;
   }
 }
 
@@ -331,11 +321,12 @@ h6 {
     height: 80vh;
   }
   #hero h1 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 36px;
+    line-height: 36px;
   }
   #hero h2 {
     font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -357,7 +348,7 @@ section {
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -365,9 +356,10 @@ section {
 }
 
 .section-title h2::after {
+  content: "";
   position: absolute;
   display: block;
-  width: 70px;
+  width: 100px;
   height: 5px;
   background: #540001;
   bottom: 0;
@@ -383,8 +375,8 @@ section {
 --------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
+  font-size: 18px;
+  color: #000000;
 }
 
 .about .content ul {
@@ -581,13 +573,12 @@ section {
       color: #9e0000;
       border: 2px solid #9e0000;
     }
-}
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .portfolio #portfolio-flters {
@@ -604,7 +595,7 @@ section {
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 15px 8px 15px;
+  padding: 15px 15px 12px 15px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -632,11 +623,10 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
-  border: 5px solid #9e0000;
-  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.75));
+  border: 6px solid #540001;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -1154,7 +1144,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  padding: 20px;
+  padding: 20px 10px;
   padding-bottom: 5px;
   color: #f4f6fd;
   font-size: 15px;
@@ -1166,7 +1156,7 @@ section {
   background: #540001;
 }
 
-#footer .credits {
+#footer .follow {
   text-align: center;
   font-size: 15px;
   color: #ffffff;
@@ -1175,12 +1165,12 @@ section {
 
 .socialIcons{
     display: flex;
-    margin-top: 5px;
+    margin-top: 0px;
     justify-content: center;
 }
 .socialIcons a{
     text-decoration: none;
-    padding:  10px;
+    padding: 10px;
     background-color: #fff;
     margin: 10px;
     border-radius: 30%;
@@ -1208,6 +1198,7 @@ section {
 }
 
 @media (max-width: 1199px) {
+
   #footer {
     position: static;
     width: auto;
@@ -1231,7 +1222,7 @@ wrapper {
     border-radius: 5px;
 }
 .wrapper a:before {
-    transition: all .6s ease;
+    transition: all 0.6s ease;
     content: "";
     position: absolute;
     top: 0;
@@ -1261,7 +1252,7 @@ wrapper {
     transform: scale(0);
 }
 .wrapper a:hover:after {
-    opacity: .35;
+    opacity: 0.35;
     transform: scale(1);
     border-radius: 5px;
 }
