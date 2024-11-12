@@ -318,9 +318,9 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    background: url("../img/bgmobile.png") center;
     width: 100%;
     height: 80vh;
+    background: url("../img/bgmobile.png");
   }
   #hero h1 {
     font-size: 34px;
