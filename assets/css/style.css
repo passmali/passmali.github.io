@@ -318,6 +318,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
+    background: url("../img/bgmobile.png") center;
     height: 80vh;
   }
   #hero h1 {
