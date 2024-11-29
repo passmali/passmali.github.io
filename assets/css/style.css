@@ -250,7 +250,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -265,9 +265,9 @@ h6 {
 #hero h1 {
   margin: 0;
   letter-spacing: 1px;
-  font-size: 48px;
+  font-size: 68px;
   font-weight: 900;
-  line-height: 50px;
+  line-height: 1;
   color: #9e0000;
   font-family: "Poppins";
   text-shadow: 1px 2px 0px #d1be9e,
@@ -278,7 +278,7 @@ h6 {
 #hero h2 {
   letter-spacing: 2px;
   margin: 10px 0 0 0;
-  font-size: 28px;
+  font-size: 36px;
   color: #cfc2ab;
   text-shadow: 0px 3px 5px black, 
                0px 3px 10px black;
@@ -287,10 +287,10 @@ h6 {
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 35px;
+  padding: 10px 30px;
   border-radius: 20px;
   transition: 0.5s;
   margin-top: 30px;
@@ -318,13 +318,15 @@ h6 {
     text-align: center;
     height: 80vh;
   }
+  #hero:before {
+    background: rgba(0, 0, 0, 0.2);
+  }
   #hero h1 {
     font-size: 48px;
-    line-height: 50px;
+    line-height: 1;
   }
   #hero h2 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 22px;
   }
 }
 /*--------------------------------------------------------------
@@ -576,6 +578,64 @@ section {
     }
 
 /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  padding-bottom: 130px;
+}
+
+.contact .person {
+  padding: 30px;
+  background: #fff;
+  width: 90%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .person h3 {
+  padding: 0 0 0 20px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #540001;
+}
+
+.contact .btn-contact {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 4px;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background: #900808;
+  border: 5px solid #900808;
+  color: red;
+}
+
+.contact .btn-contact:hover {
+  color: #fff;
+  background: #9c0000;
+  text-shadow: 
+  0px 0px 5px red,
+  0px 0px 10px red;
+}
+
+@media (max-width: 768px) {
+  .contact .person h3 {
+    font-size: 20px;
+  }
+  
+  .contact .btn-contact {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
@@ -753,61 +813,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  margin-bottom: 20px;
-}
-
-.services .icon {
-  float: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  background: #540001;
-  border-radius: 50%;
-  transition: 0.5s;
-  border: 1px solid #540001;
-}
-
-.services .icon i {
-  color: #fff;
-  font-size: 24px;
-  line-height: 0;
-}
-
-.services .icon-box:hover .icon {
-  background: #fff;
-}
-
-.services .icon-box:hover .icon i {
-  color: #540001;
-}
-
-.services .title {
-  margin-left: 80px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.services .title a {
-  color: #343a40;
-}
-
-.services .title a:hover {
-  color: #540001;
-}
-
-.services .description {
-  margin-left: 80px;
-  line-height: 24px;
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
@@ -899,180 +904,7 @@ section {
   background-color: #540001;
 }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact {
-  padding-bottom: 130px;
-}
 
-.contact .info {
-  padding: 30px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #149ddd;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #dff3fc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #050d18;
-}
-
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #173b6c;
-}
-
-.contact .info .email p {
-  padding-top: 5px;
-}
-
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #540001;
-  color: #fff;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #540001;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  padding: 30px;
-  background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact .php-email-form label {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #540001;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
-}
 
 @-webkit-keyframes animate-loading {
   0% {
