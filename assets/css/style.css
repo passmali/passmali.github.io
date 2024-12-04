@@ -588,7 +588,8 @@ section {
   padding: 30px;
   background: #fff;
   width: 90%;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
 
@@ -644,7 +645,7 @@ section {
 
 .portfolio #portfolio-flters {
   padding: 0;
-  margin: 0 auto 30px auto;
+  margin: 0px auto 30px auto;
   list-style: none;
   text-align: center;
   background: #540001;
@@ -664,7 +665,11 @@ section {
   color: #914242;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  
+}
+@media (min-width: 768px) {
+  .portfolio #portfolio-flters li {
+    font-size: 20px;
+  }
 }
 
 .portfolio #portfolio-flters li:hover,
