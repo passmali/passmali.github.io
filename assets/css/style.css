@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -22,6 +21,7 @@ h1,
 h2 {
   font-family: "Poppins", sans-serif;
 }
+
 h3,
 h4,
 h5,
@@ -271,8 +271,8 @@ h6 {
   color: #9e0000;
   font-family: "Poppins";
   text-shadow: 1px 2px 0px #d1be9e,
-               -4px 8px 5px black,
-               -4px 8px 10px black;
+    -4px 8px 5px black,
+    -4px 8px 10px black;
 }
 
 #hero h2 {
@@ -280,8 +280,8 @@ h6 {
   margin: 10px 0 0 0;
   font-size: 36px;
   color: #cfc2ab;
-  text-shadow: 0px 3px 5px black, 
-               0px 3px 10px black;
+  text-shadow: 0px 3px 5px black,
+    0px 3px 10px black;
 }
 
 #hero .btn-get-started {
@@ -332,18 +332,22 @@ h6 {
   }
 
 }
+
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 45px;
     line-height: 1;
   }
+
   #hero h2 {
     font-size: 20px;
   }
+
   #hero .btn-get-started {
     font-size: 18px;
   }
 }
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -438,6 +442,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 }
+
 .about .location h3 {
   font-size: 32px;
   font-weight: 700;
@@ -464,13 +469,23 @@ section {
 }
 
 .about .location-icon {
-color: #9e0000;
+  color: #9e0000;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
+  .about img {
+    margin: 0px;
+  }
+
+  .about .content p {
+    font-size: 16px;
+    margin: 12px;
+  }
+
   .about .location {
     width: 90%;
   }
+
   .about .location h3 {
     font-size: 24px;
   }
@@ -478,8 +493,6 @@ color: #9e0000;
   .about .location span {
     font-size: 16px;
   }
-
-
 }
 
 /*--------------------------------------------------------------
@@ -630,26 +643,27 @@ color: #9e0000;
   background: #ffffff;
   border: 2px solid #1f5297;
 }
-  #resume .button {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 35px;
-    border-radius: 20px;
-    transition: 0.5s;
-    margin-top: 30px;
-    color: #ffffff;
-    background: #c90000;
-    border: 2px solid #9e0000;
-  }
 
-  #resume .button:hover {
-      background: #d1be9e;
-      color: #9e0000;
-      border: 2px solid #9e0000;
-    }
+#resume .button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 20px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #ffffff;
+  background: #c90000;
+  border: 2px solid #9e0000;
+}
+
+#resume .button:hover {
+  background: #d1be9e;
+  color: #9e0000;
+  border: 2px solid #9e0000;
+}
 
 /*--------------------------------------------------------------
 # Contact
@@ -693,16 +707,16 @@ color: #9e0000;
 .contact .btn-contact:hover {
   color: #fff;
   background: #9c0000;
-  text-shadow: 
-  0px 0px 5px #fff,
-  0px 0px 10px #fff;
+  text-shadow:
+    0px 0px 5px #fff,
+    0px 0px 10px #fff;
 }
 
 @media (max-width: 768px) {
   .contact .person h3 {
     font-size: 20px;
   }
-  
+
   .contact .btn-contact {
     font-size: 18px;
     letter-spacing: 1px;
@@ -740,6 +754,7 @@ color: #9e0000;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
+
 @media (min-width: 768px) {
   .portfolio #portfolio-flters li {
     font-size: 20px;
@@ -749,11 +764,11 @@ color: #9e0000;
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  text-shadow: 
-  0px 0px 5px #fff,
-  0px 0px 10px red,
-  0px 0px 15px red,
-  0px 0px 18px red;
+  text-shadow:
+    0px 0px 5px #fff,
+    0px 0px 10px red,
+    0px 0px 15px red,
+    0px 0px 18px red;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1077,31 +1092,35 @@ color: #9e0000;
   margin-bottom: 0px;
 }
 
-.socialIcons{
-    display: flex;
-    margin-top: 0px;
-    justify-content: center;
+.socialIcons {
+  display: flex;
+  margin-top: 0px;
+  justify-content: center;
 }
-.socialIcons a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: #fff;
-    margin: 10px;
-    border-radius: 30%;
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 30%;
 }
-.socialIcons a i{
-    font-size: 1.8em;
-    color: #540001;
-    opacity: 0,9;
+
+.socialIcons a i {
+  font-size: 1.8em;
+  color: #540001;
+  opacity: 0, 9;
 }
+
 /* Hover affect on social media icon */
-.socialIcons a:hover{
-    background-color: #d50404;
-    transition: 0.5s;
+.socialIcons a:hover {
+  background-color: #d50404;
+  transition: 0.5s;
 }
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
 }
 
 #footer .copyright {
@@ -1121,52 +1140,58 @@ color: #9e0000;
 }
 
 wrapper {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
+
 .wrapper a {
-    border: 5px solid transparent;
-    width: 100%;
-    float: left;
-    position: relative;
-    cursor: pointer;
+  border: 5px solid transparent;
+  width: 100%;
+  float: left;
+  position: relative;
+  cursor: pointer;
 }
+
 .wrapper img {
-    max-width: 100%;
-    border-radius: 5px;
+  max-width: 100%;
+  border-radius: 5px;
 }
+
 .wrapper a:before {
-    transition: all 0.6s ease;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #333333;
-    transform: scale(0);
-    border-radius: 5px;
+  transition: all 0.6s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333333;
+  transform: scale(0);
+  border-radius: 5px;
 }
+
 .wrapper a:hover:before {
-    opacity: .2;
-    transform: scale(1);
+  opacity: .2;
+  transform: scale(1);
 }
+
 .wrapper a:after {
-    transition: all .7s ease .2s;
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background: #252525;
-    opacity: 0;
-    transform: scale(0);
+  transition: all .7s ease .2s;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: #252525;
+  opacity: 0;
+  transform: scale(0);
 }
+
 .wrapper a:hover:after {
-    opacity: 0.35;
-    transform: scale(1);
-    border-radius: 5px;
+  opacity: 0.35;
+  transform: scale(1);
+  border-radius: 5px;
 }
