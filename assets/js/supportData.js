@@ -9,7 +9,11 @@ const supportData = [
   { file: "3.png", name: "Emina Cosmetics" },
   { file: "4.png", name: "Honda Trio Motor" },
   { file: "5.png", name: "Maxim" },
-
+  { file: "1.png", name: "Bank Kalsel" },
+  { file: "2.png", name: "Teh Botol Sosro" },
+  { file: "3.png", name: "Emina Cosmetics" },
+  { file: "4.png", name: "Honda Trio Motor" },
+  { file: "5.png", name: "Maxim" },
 ];
 
 /* =======================================================

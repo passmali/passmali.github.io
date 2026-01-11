@@ -1,4 +1,55 @@
 /*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+/* poppins-regular */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'); 
+}
+/* poppins-italic */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/poppins-v24-latin-italic.woff2') format('woff2'); 
+}
+/* poppins-700 */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/poppins-v24-latin-700.woff2') format('woff2'); 
+}
+/* poppins-800 */
+@font-face {
+  font-display: swap; 
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/poppins-v24-latin-800.woff2') format('woff2'); 
+}
+/* montserrat-800 */
+@font-face {
+  font-display: swap; 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/montserrat-v31-latin-800.woff2') format('woff2'); 
+}
+/* montserrat-700i */
+@font-face {
+  font-display: swap; 
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v31-latin-700italic.woff2') format('woff2'); 
+}
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 :root {
@@ -25,12 +76,10 @@ body.dark-mode {
   --glass: 0.65;
 }
 
-
 body {
   font-family: "Poppins";
   color: var(--clr-txt);
   background: var(--clr-bg);
-  scroll-behavior: smooth;
 }
 
 a {
@@ -43,8 +92,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: "Montserrat";
 }
 
@@ -96,17 +144,11 @@ h2 {
   animation: dotFlashing 1s infinite ease-in-out both;
 }
 
-.dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) {animation-delay: 0.4s; }
 
 @keyframes dotFlashing {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 0.3;
     transform: scale(0.7) translateY(0);
   }
@@ -146,7 +188,7 @@ h2 {
   height: 40px;
   width: 40px;
   border-radius: 100%;
-  filter: drop-shadow(0 2px 6px var(--shadow));
+  filter: drop-shadow(0 2px 4px var(--shadow));
   transition: opacity 0.4s;
 }
 
@@ -188,8 +230,8 @@ h2 {
   #header {
     left: -300px;
     background: rgba(33, 0, 0, var(--glass));
-    backdrop-filter: blur(18px);
-   -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
   }
 
   #main {
@@ -215,9 +257,9 @@ h2 {
 
 .head-bg {
   background-color: rgba(84, 0, 1, var(--glass));
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  filter: drop-shadow(0px 4px 6px var(--shadow));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  filter: drop-shadow(0px 4px 4px var(--shadow));
 }
 
 .header-left {
@@ -257,8 +299,7 @@ h2 {
   margin-top: -16px;
 }
 
-.nav a,
-.nav a:focus {
+.nav a, .nav a:focus {
   display: flex;
   align-items: center;
   color: #6f7180;
@@ -269,25 +310,18 @@ h2 {
   font-size: 16px;
 }
 
-.nav a i,
-.nav a:focus i {
+.nav a i, .nav a:focus i {
   font-size: 24px;
   line-height: 0;
   transition: 0.4s;
 }
 
-.nav a:hover,
-.nav .active,
-.nav .active:focus,
-.nav li:hover>a {
+.nav a:hover, .nav .active, .nav .active:focus, .nav li:hover>a {
   text-decoration: none;
   color: #fff;
 }
 
-.nav a:hover i,
-.nav .active i,
-.nav .active:focus i,
-.nav li:hover>a i {
+.nav a:hover i, .nav .active i, .nav .active:focus i, .nav li:hover>a i {
   color: var(--clr-acnt-hvr);
  }
 
@@ -296,14 +330,8 @@ h2 {
   color: #fff;
 }
 
-.mobile-nav-active {
-  overflow: hidden;
-}
-
-.mobile-nav-active #header {
-  left: 0;
-}
-
+.mobile-nav-active { overflow: hidden; }
+.mobile-nav-active #header { left: 0; }
 
 @media (min-width: 1199px) {
   .mobile-nav {
@@ -312,11 +340,8 @@ h2 {
 
   .head {
     background-color: #540001;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
     width: 300px;
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -390,10 +415,10 @@ h2 {
   top: 58px;
   right: 0;
   background: rgba(33, 0, 0, var(--glass));
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 8px;
-  box-shadow: 0 4px 6px var(--shadow);
+  box-shadow: 0 4px 4px var(--shadow);
   padding: 8px;
   width: 150px;
   opacity: 0;
@@ -458,10 +483,9 @@ h2 {
     height: 36px;
     width: 36px;
     background: #540001;
-    filter: drop-shadow(0 2px 6px var(--shadow));
+    filter: drop-shadow(0 2px 4px var(--shadow));
   }
 }
-
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -482,20 +506,17 @@ h2 {
   bottom: -2px;
 }
 
-#hero .container {
-  padding: 16px;
-}
+#hero .container { padding: 16px; }
 
 h1 {
   font-size: 68px;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 800;
   background: linear-gradient(30deg, var(--clr-acnt), #ff5126);
  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0.06em 0.1em 0 #fff);
-
+  filter: drop-shadow(0.05em 0.08em 0 #fff);
 }
 
 #hero h2 {
@@ -503,11 +524,12 @@ h1 {
   margin-top: 0.2em;
   font-size: 34px;
   font-weight: 700;
+  font-style: italic;
   color: #fff;
 }
 
 #hero .btn-start {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 26px;
   display: inline-block;
   padding: 0.4em 0.86em;
@@ -521,7 +543,7 @@ h1 {
 #hero .btn-start:hover {
   background: var(--clr-acnt-hvr);
   color: #fff;
-  text-shadow: 0 0 8px #fff;
+  text-shadow: 0 0 4px #fff;
   filter: none;
   transform: scale(0.9) translateX(-0.5em) translateY(0.6em);
 }
@@ -612,7 +634,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about img {
-  filter: drop-shadow(2px 4px 2px var(--shadow));
+  filter: drop-shadow(3px 6px 2px var(--shadow));
   margin-left: 12px;
   width: 100%;
 }
@@ -631,7 +653,7 @@ section {
   padding: 1.2em;
   background: var(--white);
   border-radius: 1.25em;
-  box-shadow: 6px 8px 2px var(--shadow);
+  box-shadow: 3px 6px 2px var(--shadow);
 }
 
 .about .info-box h3 {
@@ -724,7 +746,7 @@ section {
 
 .facts .count-box p {
   margin-top: 6px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   color: var(--clr-txt);
 }
@@ -756,8 +778,8 @@ section {
   position: relative;
   border-radius: 1.25em;
   overflow: hidden;
-  box-shadow: 6px 8px 2px var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 3px 6px 2px var(--shadow);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   border: 2px solid var(--clr-prim);
   aspect-ratio: 16/9;
   background-size: cover;
@@ -765,11 +787,10 @@ section {
 }
 
 .docx a:hover {
-  transform: translateY(8px) translateX(6px);
+  transform: translateY(7px) translateX(4px);
   box-shadow: 0px 0px 2px var(--shadow);
 }
 
-/* Tambahin ini di CSS kamu */
 .docx a::after {
   content: "Klik untuk Membuka";
   position: absolute;
@@ -783,26 +804,12 @@ section {
   opacity: 0;
   transition: 0.3s;
 }
-.docx a:hover::after {
-  opacity: 1;
-}
+.docx a:hover::after { opacity: 1; }
 
-
-#link-sd {
-  background-image: url('../img/sd.webp');
-}
-
-#link-sm {
-  background-image: url('../img/sm.webp');
-}
-
-#link-juknis {
-  background-image: url('../img/juklom.webp');
-}
-
-#link-juknisv {
-  background-image: url('../img/jukvid.webp');
-}
+#link-sd { background-image: url('../img/sd.webp');}
+#link-sm { background-image: url('../img/sm.webp'); }
+#link-juknis { background-image: url('../img/juklom.webp');}
+#link-juknisv { background-image: url('../img/jukvid.webp');}
 
 /*--------------------------------------------------------------
 # Sponsorship/Supports & Media Partner
@@ -810,26 +817,28 @@ section {
 .support h3 {
   color: var(--clr-prim);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .support .support-slider {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .support .swiper-slide {
-  text-align: center;
   width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support .swiper-wrapper {
+  transition-timing-function: linear;
 }
 
 .support .swiper-slide img {
-  width: 100%;
-  height: 76px;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  height: 74px;
+  max-width: 150px;
+  object-fit: contain;
 }
 
 /*--------------------------------------------------------------
@@ -866,7 +875,7 @@ section {
 .contact-button {
   display: flex;
   background-color: var(--white);
-  box-shadow: 1px 4px 6px var(--shadow);
+  box-shadow: 1px 3px 4px var(--shadow);
   color: var(--clr-prim);
   padding: 1.2em;
   border-radius: 1.25em;
@@ -961,7 +970,7 @@ section {
   background-color: #000;   
   border-radius: 1.25em;   
   border: 2px solid var(--clr-prim); 
-  box-shadow: 6px 8px 2px var(--shadow); 
+  box-shadow: 3px 6px 2px var(--shadow); 
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -985,14 +994,14 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  width: 70px;
+  width: 72px;
   height: 50px;
   background: rgba(255, 0, 51, 0.6); 
   border-radius: 20%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 0 rgba(255, 0, 51, 0.6);
+  box-shadow: 0 0 0 rgba(255, 0, 51, 0.6);
   transition: all 0.3s ease;
   z-index: 2;
 }
@@ -1000,14 +1009,13 @@ section {
 .video-wrapper:hover .play-btn {
   background: #ff0033; 
   transform: translate(-50%, -50%) scale(1.2); 
-  box-shadow: 0 0 20px #ff0033; 
+  box-shadow: 0 0 10px #ff0033; 
 }
 
 .play-btn i {
   color: #fff;
   font-size: 32px;
   margin-left: 4px; 
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
 .video h3 {
@@ -1037,57 +1045,17 @@ section {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
-.gallery-item {
-  margin-bottom: 0px;
-}
-
-#gallery-flters {
-  padding: 14px 16px;
-  margin: 4vw;
-  list-style: none;
-  text-align: center;
-  background: var(--clr-prim);
-  border-radius: 18px;
-  box-shadow: 2px 4px 2px var(--shadow);
-}
-
-#gallery-flters li {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #AC4D4D;
-  margin: 0 2vw;
-  transition: 0.5s ease-in-out;
-}
-
-#gallery-flters li:hover,
-#gallery-flters li.filter-active {
-  color: var(--white);
-  text-shadow:
-    0px 0px 2px var(--white),
-    0px 0px 12px red;
-}
-
-@media (min-width: 768px) {
-  #gallery-flters li {
-    font-size: 24px;
-  }
-}
-
 .gallery-wrap {
   position: relative;
   overflow: hidden;
   margin: 18px 6px;
   border-radius: 10px;
-  box-shadow: 2px 4px 8px var(--shadow);
-  --t-gallery: 0.5s;
+  box-shadow: 2px 4px 2px var(--shadow);
 }
 
 .gallery-wrap img {
   width: 100%;
-  transition: var(--t-gallery) ease;
+  transition: 0.5s ease;
 }
 
 .gallery-wrap .gallery-links {
@@ -1097,7 +1065,7 @@ section {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: var(--t-gallery) ease;
+  transition: opacity 0.5s ease;
 }
 
 .gallery-wrap .gallery-links a {
@@ -1123,7 +1091,7 @@ section {
   opacity: 1;
   letter-spacing: 0.1em;
   transform: scale(1.2);
-  text-shadow: 0 0 7px rgb(253, 46, 18);
+  text-shadow: 0 0 6px #fd2e12;
 }
 
 /*--------------------------------------------------------------
@@ -1164,8 +1132,7 @@ section {
   margin: 0 4px;
   background-color: #fff;
   border-radius: 25%;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transisi lebih mantul */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
 
@@ -1177,7 +1144,7 @@ section {
 .socialIcons a:hover {
   background-color: #d50404;
   transform: scale(1.2) rotate(5deg);
-  box-shadow: 0 10px 30px rgba(213, 4, 4, 0.4);
+  box-shadow: 0 10px 24px rgba(213, 4, 4, 0.4);
 }
 
 .socialIcons a:hover i {
