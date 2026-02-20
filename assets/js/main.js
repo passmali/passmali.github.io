@@ -1,131 +1,88 @@
- 
 (function() {
-  "use strict";
+  "use strict"
 
-  /**
-   * Easy selector helper function
-   */
+  // Helper untuk memilih elemen
   const select = (el, all = false) => {
     el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
+    if (all) return [...document.querySelectorAll(el)]
+    return document.querySelector(el)
+  }
+
+  // Preloader
+  let loading = document.getElementById('loader');
+  if (loading) {
+    window.addEventListener('load', () => {
+      loading.style.opacity = '0';
+      setTimeout(() => { loading.style.display = 'none'; }, 500);
+    });
+  }
+
+  // Inisialisasi AOS Animation
+  window.addEventListener('load', () => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      })
+    }
+  })
+
+  // Efek Scroll untuk Hero Image dan Back to Top
+  const heroEl = select('#hero')
+  const backToTop = select('.back-to-top')
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY
+    const isTabletOrDesktop = window.matchMedia('(min-width: 540px)').matches
+
+    // Parallax Hero
+    if (heroEl) {
+      if (isTabletOrDesktop) {
+        heroEl.style.backgroundPositionY = `${scrollY * -0.4}px`
+      } else {
+        heroEl.style.backgroundPositionY = 'center'
+      }
+    }
+
+    // Tampilkan tombol kembali ke atas
+    if (backToTop) {
+      if (scrollY > 300) backToTop.classList.add('active')
+      else backToTop.classList.remove('active')
     }
   }
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
+  // Optimasi scroll listener dengan RequestAnimationFrame
+  let ticking = false
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll()
+        ticking = false
+      })
+      ticking = true
     }
+  }, { passive: true })
+
+  window.addEventListener('load', handleScroll)
+
+  // Inisialisasi GLightbox untuk Galeri
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({ selector: '.glightbox' })
   }
-  
- 
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-  
-    /**
-   * Loader web
-   */
-  var loading = document.getElementById('loader');
-  window.addEventListener('load', function() {
-    loading.style.opacity = '0';});
-  
-  loading.addEventListener('transitionend', function() {
-        loading.style.display = 'none';
-    });
-  
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out-cubic',
-      once: true,
-      mirror: false
-    })
-  });
-  
-  /**
-   * Light/Dark Mode
-   */
-  const themeSwitcher = select('.theme-switcher');
-  const themeButton = select('.theme-button');
-  const themeOptions = select('.theme-option', true);
-  const body = select('body');
-  const getSavedTheme = () => localStorage.getItem('theme');
-  const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const updateUI = (chosenTheme) => {
-    let appliedTheme = chosenTheme;
-    if (chosenTheme === 'system') {
-      appliedTheme = getSystemTheme();
-    }
-    
-    body.classList.toggle('dark-mode', appliedTheme === 'dark');
-    const mainIconClass = appliedTheme === 'dark' ? 'bi-moon-fill' : 'bi-sun-fill';
-    themeButton.innerHTML = `<i class="bi ${mainIconClass}"></i>`;
-    themeOptions.forEach(opt => {
-      opt.classList.toggle('active', opt.getAttribute('data-theme') === chosenTheme);
-    });
-  };
-  
-  const setTheme = (theme) => {
-    if (theme === 'system') {
-      localStorage.removeItem('theme');
+
+  // Sistem Dark Mode Otomatis mengikuti OS
+  const applySystemTheme = () => {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode')
     } else {
-      localStorage.setItem('theme', theme);
+      document.body.classList.remove('dark-mode')
     }
-    updateUI(theme);
-  };
-  on('click', '.theme-button', () => {
-    themeSwitcher.classList.toggle('active');
-  });
-  
-  themeOptions.forEach(option => {
-    on('click', `[data-theme="${option.getAttribute('data-theme')}"]`, () => {
-      setTheme(option.getAttribute('data-theme'));
-      themeSwitcher.classList.remove('active');
-    });
-  });
-  
-  const initialTheme = getSavedTheme() || 'system';
-  setTheme(initialTheme);
-  
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (getSavedTheme() === null) { // Hanya update jika pilihannya 'system'
-      updateUI('system');
-    }
-  });
-  
-  document.addEventListener('click', (e) => {
-    if (!themeSwitcher.contains(e.target)) {
-      themeSwitcher.classList.remove('active');
-    }
-  });
-  
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
-  
-  
-  })()
+  }
+
+  applySystemTheme()
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme)
+
+})()

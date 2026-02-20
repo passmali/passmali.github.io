@@ -1,99 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tidak Ditemukan | PASSION</title>
-  <meta content="" name="description">
-
-    <!-- Favicons -->
+  
+  <!-- Favicons -->
   <link href="assets/img/icon.webp" rel="icon">
   <link href="assets/img/icon.webp" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-
-   <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
-    <style>
-   /* --- 2. BACKGROUND --- */
-  .bg {
-    position: absolute;
-    background: url("assets/img/bg.webp") bottom / cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   filter: blur(0.5em);
-    z-index: 1;
-    overflow: hidden;
-  }
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <style>
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      background: var(--clr-bg);
+    }
+
+    /* BACKGROUND ANGKA RAKSASA (Desain 4) */
+    .bg-text {
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(150px, 40vw, 500px);
+      font-weight: 800;
+      color: var(--clr-prim);
+      opacity: 0.05; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      user-select: none;
+      pointer-events: none;
+      line-height: 0.8;
+    }
+
+    /* KONTAINER UTAMA */
+    .content-box {
+      text-align: center;
+      padding: 20px;
+      z-index: 10; 
+      position: relative;
+      animation: popUp 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popUp {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .icon-wrapper {
+      font-size: 80px;
+      color: var(--clr-acnt); 
+      margin-bottom: 10px;
+      display: inline-block;
+      /* Animasi Goyang "Siap Salah" */
+      animation: shake 2s infinite ease-in-out; 
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg) scale(1.1); }
+      75% { transform: rotate(10deg) scale(1.1); }
+    }
+
+    /* JUDUL BESAR */
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 800;
+      margin-bottom: 5px;
+      color: var(--clr-prim); 
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      text-shadow: 2px 2px 0 var(--clr-bg); 
+    }
+
+    h1 span {
+      color: var(--clr-acnt);
+    }
+
+    /* TEKS DESKRIPSI */
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(14px, 3.5vw, 18px);
+      max-width: 500px;
+      margin: 10px auto 35px; 
+      opacity: 0.8;
+      line-height: 1.6;
+      color: var(--clr-txt);
+    }
+
+    /* TOMBOL "KEMBALI KE BARISAN" */
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 40px; 
+      background: var(--clr-second);
+      color: #fff !important;
+      border-radius: 50px;
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px var(--shadow);
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+
+    /* Efek Hover Tombol */
+    .btn-home:hover {
+      background: var(--clr-acnt);
+      transform: translateY(-5px); 
+      box-shadow: 0 10px 25px rgba(173, 17, 7, 0.4); 
+    }
+
+    .btn-home i {
+      font-size: 1.3em;
+      transition: transform 0.3s;
+    }
+
+    .btn-home:hover i {
+      transform: translateX(-5px); 
+    }
+
+    @media (max-width: 768px) {
+      .bg-text { opacity: 0.08; } 
+    }
   </style>
 </head>
 
 <body>
-  <div id="loader" oncontextmenu="return false;" ondragstart="return false;">
-    <div class="loader-content">
-      <img src="assets/img/icon.webp" class="loader-logo">
+  <div class="bg-text">404</div>
 
-      <div class="dots-container">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
+  <!-- Konten -->
+  <div class="content-box">
+    
+    <div class="icon-wrapper">
+      <i class="bi bi-exclamation-triangle-fill"></i>
     </div>
-    <div class="loader-footer">
-      <p><i>&copy; 2026 Paskibra SMA Negeri 5 Banjarmasin</i></p>
-    </div>
+  
+    <h1>SIAP! <br><span>SALAH ALAMAT!</span></h1>
+    <p>
+      <strong>Lapor Komandan!</strong> Halaman yang Anda cari
+      <strong>tidak ditemukan.</strong> Coba periksa kembali URL atau kembali ke formasi.
+    </p>
+
+    <!-- Tombol Aksi -->
+    <a href="./" class="btn-home">
+      <i class="bi bi-arrow-left"></i> KEMBALI KE FORMASI
+    </a>
+    
   </div>
-
-    <!-- Background -->
-    <div class="bg">
-    </div>
-
-    <!-- Konten Utama -->
-    <div class="glass-card" data-aos="fade-up">
-        
-        <!-- Badge -->
-        <div class="badge-custom">
-            &nbsp;404 - Not Found
-        </div>
-
-        <!-- Headline -->
-        <h1>OOPS :(</h1>
-
-        <!-- Deskripsi -->
-        <p class="subtitle">
-          Laman yang anda cari tidak ditemukan. <br>
-          Coba periksa kembali URL atau kembali ke beranda.
-
-        <!-- Tombol -->
-        <div class="socialIcons">
-          <a href="index.html"><i class="bi bi-house-fill" aria-label="Kembali ke Beranda"></i></a>
-                </div>
-
-        <!-- Footer -->
-        <footer>
-          <i>&copy; 2026 Paskibra SMA Negeri 5 Banjarmasin.</i>
-        </footer>
-    </div>
-  
-    <!-- Vendor JS Files -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  
 </body>
 </html>
-
-
